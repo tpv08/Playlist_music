@@ -43,23 +43,23 @@ h1 {
     padding: 10px; /* Padding de cada item */
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente el contenido */
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    justify-content: flex-start; /* Empieza desde el top */
     align-items: center; /* Centra horizontalmente el contenido */
-    height: 600px; /* Aumenta la altura de la tarjeta */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Aumenta la altura máxima adecuada para la imagen */
+    max-height: 40vh; /* Ajusta la altura máxima a 40% de la altura de la ventana */
     object-fit: cover; /* Cubre el área sin distorsión */
     border-radius: 8px;
     border: 2px solid #ff69b4; /* Borde rosado */
 }
 
 .carousel-item h3 {
-    margin: 5px 0 3px;
+    margin: 10px 0 5px; /* Añadido margen superior */
     color: #ffffff;
 }
 
@@ -112,11 +112,11 @@ audio {
     }
 
     .carousel-item {
-        height: 500px; /* Aumenta la altura de la tarjeta en pantallas más pequeñas */
+        height: auto; /* Permitir que la altura se ajuste según el contenido */
     }
 
     .carousel-item img {
-        max-height: 250px; /* Ajusta la altura máxima de la imagen */
+        max-height: 30vh; /* Ajusta la altura máxima de la imagen en pantallas más pequeñas */
     }
 
     h1 {
@@ -146,14 +146,26 @@ audio {
     }
 
     .carousel-item {
-        height: 400px; /* Reduce la altura de la tarjeta en pantallas pequeñas */
+        height: auto; /* Permitir que la altura se ajuste según el contenido */
     }
 
     .carousel-item img {
-        max-height: 150px; /* Ajusta la altura máxima de la imagen */
+        max-height: 25vh; /* Ajusta la altura máxima de la imagen en pantallas pequeñas */
     }
     
     audio {
         width: 100%;
+    }
+}
+
+/* Asegurando que se estire correctamente en dispositivos pequeños */
+@media (max-width: 500px) {
+    .carousel {
+        width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+        min-width: 200px; /* Ancho mínimo de 200px */
+    }
+
+    .carousel-item {
+        padding: 5px; /* Reducir padding para mejor ajuste */
     }
 }
