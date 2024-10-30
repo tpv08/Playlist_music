@@ -24,12 +24,12 @@ h1 {
     overflow: hidden;
     position: relative;
     width: 100%; /* Ancho total de la pantalla */
-    max-width: 600px; /* Reducido para que sea menos ancho */
+    max-width: 800px; /* Aumenta la anchura máxima del carrusel */
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     background-color: #000000; /* Fondo negro */
-    padding: 10px; /* Reduce el padding para hacer la tarjeta más pequeña */
+    padding: 10px; /* Padding general */
 }
 
 .carousel-track {
@@ -40,15 +40,20 @@ h1 {
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
-    padding: 10px; /* Reduce el padding de cada item */
+    padding: 10px; /* Padding de cada item */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    height: 600px; /* Aumenta la altura de la tarjeta */
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 300px; /* Mantiene una altura máxima adecuada */
-    object-fit: cover;
+    max-height: 400px; /* Aumenta la altura máxima adecuada para la imagen */
+    object-fit: cover; /* Cubre el área sin distorsión */
     border-radius: 8px;
     border: 2px solid #ff69b4; /* Borde rosado */
 }
@@ -67,7 +72,7 @@ h1 {
 audio {
     width: 90%;
     max-width: 100%;
-    margin-top: 8px;
+    margin: 20px 0; /* Aumenta el margen para centrar mejor */
 }
 
 /* Botones del carrusel */
@@ -102,12 +107,16 @@ audio {
 @media (max-width: 768px) {
     .carousel {
         width: 95%;
-        max-width: 400px; /* Limita el ancho en dispositivos más pequeños */
+        max-width: 500px; /* Limita el ancho en dispositivos más pequeños */
         padding: 5px; /* Ajusta el padding en dispositivos más pequeños */
     }
 
+    .carousel-item {
+        height: 500px; /* Aumenta la altura de la tarjeta en pantallas más pequeñas */
+    }
+
     .carousel-item img {
-        max-height: 200px; /* Ajusta la altura máxima de la imagen */
+        max-height: 250px; /* Ajusta la altura máxima de la imagen */
     }
 
     h1 {
@@ -134,6 +143,10 @@ audio {
 
     .carousel-button {
         padding: 6px;
+    }
+
+    .carousel-item {
+        height: 400px; /* Reduce la altura de la tarjeta en pantallas pequeñas */
     }
 
     .carousel-item img {
