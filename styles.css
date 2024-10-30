@@ -24,7 +24,7 @@ h1 {
     overflow: hidden;
     position: relative;
     width: 100%; /* Ancho total de la pantalla */
-    max-width: 800px; /* Aumenta la anchura máxima del carrusel */
+    max-width: 600px; /* Reduce el ancho máximo del carrusel */
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -52,7 +52,7 @@ h1 {
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 40vh; /* Ajusta la altura máxima a 40% de la altura de la ventana */
+    max-height: 60vh; /* Ajusta la altura máxima a 60% de la altura de la ventana */
     object-fit: cover; /* Cubre el área sin distorsión */
     border-radius: 8px;
     border: 2px solid #ff69b4; /* Borde rosado */
@@ -107,7 +107,7 @@ audio {
 @media (max-width: 768px) {
     .carousel {
         width: 95%;
-        max-width: 500px; /* Limita el ancho en dispositivos más pequeños */
+        max-width: 400px; /* Limita aún más el ancho en dispositivos más pequeños */
         padding: 5px; /* Ajusta el padding en dispositivos más pequeños */
     }
 
@@ -116,7 +116,7 @@ audio {
     }
 
     .carousel-item img {
-        max-height: 30vh; /* Ajusta la altura máxima de la imagen en pantallas más pequeñas */
+        max-height: 50vh; /* Ajusta la altura máxima de la imagen en pantallas más pequeñas */
     }
 
     h1 {
@@ -150,11 +150,7 @@ audio {
     }
 
     .carousel-item img {
-        max-height: 25vh; /* Ajusta la altura máxima de la imagen en pantallas pequeñas */
-    }
-    
-    audio {
-        width: 100%;
+        max-height: 40vh; /* Ajusta la altura máxima de la imagen en pantallas pequeñas */
     }
 }
 
