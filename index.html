@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+        <h1>Explore music</h1>
+
+        <!-- Carrusel -->
+        <div class="carousel">
+            <button class="carousel-button left" onclick="moveCarousel(-1)">❮</button>
+            <div class="carousel-track">
+                <!-- Elementos del Carrusel -->
+                <div class="carousel-item active">
+                    <img src="src/img2.jpg" alt="Imagen 1">
+                    <h3>Taiana Mujer Amada</h3>
+                    <p>Suno AI</p>
+                    <audio controls>
+                        <source src="src/song1.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/img1.jpeg" alt="Imagen 2">
+                    <h3>Princesa Brasileira</h3>
+                    <p>Suno AI</p>
+                    <audio controls>
+                        <source src="src/song2.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/img3.jpg" alt="Imagen 3"> 
+                    <h3>Princesa Taiana</h3>
+                    <p>Suno AI</p>
+                    <audio controls>
+                        <source src="src/song3.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/img4.jpeg" alt="Imagen 4"> 
+                    <h3>Coleccionista De Canciones</h3>
+                    <p>Camila</p>
+                    <audio controls>
+                        <source src="src/song4.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/img5.jpeg" alt="Imagen 5"> 
+                    <h3>Amei Te Ver </h3>
+                    <p>TIAGO IORC</p>
+                    <audio controls>
+                        <source src="src/song5.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+            <button class="carousel-button right" onclick="moveCarousel(1)">❯</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
